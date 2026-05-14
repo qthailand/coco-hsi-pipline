@@ -1,0 +1,6 @@
+# ignore __pycache__ folders
+#__pycache__/
+#pipeline/__pycache__/
+#tests/__pycache__/
+
+

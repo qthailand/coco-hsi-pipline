@@ -3,4 +3,9 @@ __pycache__/
 pipeline/__pycache__/
 tests/__pycache__/
 
+#ignore datacube files
+*.bsq
+*.hdr
+
+
 

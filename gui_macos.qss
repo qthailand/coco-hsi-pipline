@@ -1,0 +1,225 @@
+QWidget {
+    color: #1d1d1f;
+    font-family: "SF Pro Text", "Helvetica Neue", "Segoe UI", sans-serif;
+    font-size: 9.5pt;
+}
+
+QWidget#rootWrap {
+    background: #00000000;
+}
+
+QFrame#windowShell {
+    background: #f5f5f7;
+    border: 1px solid #dddddf;
+    border-radius: 0px;
+}
+
+QWidget#titleBar {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #f9f9fb,
+        stop:1 #efeff2
+    );
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom: 1px solid #d9d9de;
+}
+
+QLabel#windowTitle {
+    color: #45454a;
+    font-size: 10pt;
+    font-weight: 600;
+}
+
+QWidget#macControlCluster {
+    background: transparent;
+}
+
+QPushButton#macClose,
+QPushButton#macMin,
+QPushButton#macMax {
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    border-radius: 6px;
+    padding: 0px;
+    color: transparent;
+    min-width: 12px;
+    min-height: 12px;
+    max-width: 12px;
+    max-height: 12px;
+}
+
+QPushButton#macClose {
+    background: qradialgradient(cx:0.38, cy:0.35, radius:0.78, fx:0.30, fy:0.28,
+        stop:0 #ff8b84,
+        stop:0.55 #ff625a,
+        stop:1 #f04036
+    );
+}
+
+QPushButton#macMin {
+    background: qradialgradient(cx:0.38, cy:0.35, radius:0.78, fx:0.30, fy:0.28,
+        stop:0 #ffd471,
+        stop:0.55 #ffbe34,
+        stop:1 #e5a400
+    );
+}
+
+QPushButton#macMax {
+    background: qradialgradient(cx:0.38, cy:0.35, radius:0.78, fx:0.30, fy:0.28,
+        stop:0 #57de71,
+        stop:0.55 #31c94b,
+        stop:1 #1eaa35
+    );
+}
+
+QPushButton#macClose:hover,
+QPushButton#macMin:hover,
+QPushButton#macMax:hover {
+    border: 1px solid rgba(0, 0, 0, 0.22);
+}
+
+QPushButton#macClose:pressed,
+QPushButton#macMin:pressed,
+QPushButton#macMax:pressed {
+    background: #b8b8be;
+    border: 1px solid rgba(0, 0, 0, 0.28);
+}
+
+QPushButton#macClose:focus,
+QPushButton#macMin:focus,
+QPushButton#macMax:focus {
+    outline: none;
+}
+
+QFrame#card {
+    background: #ffffff;
+    border: 1px solid #e6e6eb;
+    border-radius: 0px;
+}
+
+QLabel#cardTitle {
+    font-size: 13pt;
+    font-weight: 600;
+    color: #111111;
+}
+
+QLabel#status {
+    color: #0a7f4f;
+    font-weight: 500;
+}
+
+QLabel#hint {
+    color: #6e6e73;
+    font-size: 9pt;
+}
+
+QTextEdit,
+QListWidget,
+QScrollArea {
+    background: #ffffff;
+    border: 1px solid #d2d2d7;
+    border-radius: 0px;
+    padding: 4px 8px;
+    min-height: 30px;
+    selection-background-color: #0a84ff;
+    selection-color: #ffffff;
+}
+
+QTextEdit:focus,
+QListWidget:focus,
+QScrollArea:focus {
+    border: 1px solid #0a84ff;
+}
+
+QSplitter::handle {
+    background: #ececf0;
+}
+
+QSplitter::handle:horizontal {
+    width: 6px;
+}
+
+QListWidget::item {
+    padding: 7px 8px;
+    border-bottom: 1px solid #f0f0f3;
+}
+
+QListWidget#modelList {
+    min-height: 0;       /* ← แก้: ให้ splitter/layout จัดการขนาดแทน */
+}
+
+QListWidget::indicator {
+    width: 14px;
+    height: 14px;
+}
+
+QListWidget::indicator:unchecked {
+    border: 1px solid #b9bcc3;
+    background: #ffffff;
+}
+
+QListWidget::indicator:checked {
+    border: 1px solid #0a84ff;
+    background: #0a84ff;
+}
+
+QListWidget::item:selected {
+    background: #0a84ff;
+    color: #ffffff;
+}
+
+QListWidget::item:hover {
+    background: #f3f8ff;
+}
+
+QTabWidget::pane {
+    border: 1px solid #e6e6eb;
+    border-radius: 0px;
+    background: #ffffff;
+    top: -1px;
+}
+
+QTabBar::tab {
+    background: #f4f4f8;
+    border: 1px solid #d8d8dd;
+    border-bottom: none;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    color: #3a3a3c;
+    padding: 8px 12px;
+    margin-right: 2px;
+}
+
+QTabBar::tab:selected {
+    background: #ffffff;
+    color: #111111;
+    font-weight: 600;
+}
+
+QTabBar::tab:hover {
+    background: #e9e9ee;
+}
+
+QScrollBar:vertical {
+    background: transparent;
+    width: 10px;
+    margin: 2px;
+}
+
+QScrollBar::handle:vertical {
+    background: #c7c7cc;
+    border-radius: 5px;  /* ← แก้: pill shape แบบ macOS */
+    min-height: 28px;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QToolTip {
+    background: #ffffff;
+    color: #1d1d1f;
+    border: 1px solid #d2d2d7;
+    border-radius: 0px;
+    padding: 4px 6px;
+}
